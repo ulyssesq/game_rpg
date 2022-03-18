@@ -11,10 +11,8 @@ namespace game_rpg.src.Entities
             int maxMp = level * 150;
             this.InitMP(maxMp);
             
-            this.Attack = level * 10;
-            this.MagicAtack = level * 10;
-            this.Defense = level * 5;
-            this.MagicDefense = level * 5;
+            this.AttackPower = level * 10;
+            this.DefensePower = level * 5;
         }
     }
 }
