@@ -4,7 +4,8 @@ namespace Game.Entities
     {
         public BlackWizard(string name, int level) : base(name, level, HeroType.BlackWizard)
         {
-
+            this.Defense = level * 5;
+            this.Strength = level * 20;
         }
 
         public BlackWizard(string name) : this(name, 1)
@@ -12,17 +13,11 @@ namespace Game.Entities
             
         }
 
-        public override string Attack() {
-            return this.Name + " lançou magia";
-        }
 
-        public string Attack(int bonus) {
-            if (bonus > 6) {
-                return this.Name + " lançou uma magia super efetiva com bonus de " + bonus;
-            }
-            else {
-                return this.Name + " lançou uma magia com força fraca com bonus de " + bonus;
-            }
+        public override bool SpecialAttack(Hero hero)
+        {
+            Console.WriteLine($"{Type} invocou as chamas da gambiarra suprema! while(1==1); if(false); goto GoHorse udpate from table [sem where]");
+            return base.SpecialAttack(hero);
         }
     }
 }
